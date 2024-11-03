@@ -51,6 +51,7 @@ def compute_loss_and_grad(param_w, data, start, stop, num_points=100):
     grad_values = jnp.array([grad_loss(w, data) for w in param_w_values])
     return param_w_values, loss_values, grad_values
 
+
 param_w_values, loss_values, grad_values = (
     compute_loss_and_grad(0.0, train_ds, -3, 10))
 
